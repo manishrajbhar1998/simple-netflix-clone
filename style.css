@@ -1,0 +1,223 @@
+/* normalise css */
+body,html{
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    background: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease-in;
+}
+header.black-bg{
+    background-color: #141414;
+}
+.container{
+    width: 100%;
+    max-width: 1442px;
+    margin: 0 auto;
+    /* border: 1px solid #fff; */
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-cont,.right-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+header .brand{
+    max-width: 100px;
+}
+.main-nav{
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-item{
+    color: #fff;
+    margin-right: 20px;
+    color: #e5e5e5;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.nav-item.active, .nav-item:hover{
+    color: #fff;
+    opacity: 1;
+    font-weight: 600;
+}
+
+.right-cont i{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+/* Movies Section Css */
+.movies-section{
+
+}
+
+.movie-section-heading{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.explore-nudge{
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+}
+
+.movie-section-heading:hover .explore-nudge{
+    display: inline-block;
+}
+
+.movies-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap:  nowrap;
+    justify-content: center;
+    overflow-x: scroll;
+    overflow-y:  hidden;
+    margin-bottom: 40px;
+
+}
+
+.movie-item{
+    width: 240px;
+    object-fit: contain;
+    margin: 0 10px;
+    border-radius: 5px;
+    position: relative;
+    
+}
+.movie-item-img{
+    width: inherit;
+}
+
+.movie-item-video{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: all 0.5s;
+    border: none;
+}
+.movie-item:hover .movie-item-video{
+   display: block;
+    transition: all 0.5s;
+    transform: scale(1.2);
+}
+.movie-title{
+    margin-top: -5px;
+}
+
+
+/* banner section */
+.banner-section{
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    position: relative;
+    padding-top: 80px;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-left: 2%;
+}
+
+.banner-title{
+    color: #fff;
+    font-size: 70px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.banner-info{
+    font-size: 22px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.banner-overview{
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.ation-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.action-btn{
+    border: none;
+    background: #fff; 
+    padding: 10px 22px;
+    margin-right: 11px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+.action-btn:nth-child(2){
+    background: lightgray;
+    color: #000;
+}
+
+.banner-fadebottom{
+    height: 120px;
+    width: 100%;
+    background: linear-gradient(180deg,transparent,rgba(37,37,37,.61) ,#141414);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+/* RESPONSIVE CSS */
+@media screen and (max-width:767px) {
+    .main-nav{
+        display: none;
+    }
+    .banner-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
